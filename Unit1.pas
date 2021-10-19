@@ -1,4 +1,4 @@
-unit uGeradorTelas;
+unit Unit1;
 
 interface
 
@@ -32,7 +32,7 @@ type
   end;
 
 const
-  DataBaseName = 'delphireact.';
+  DataBaseName = 'dbreact.';
 
 var
   uGeradorTelas: TuGeradorTelas;
@@ -102,6 +102,7 @@ var
 begin
   ArqController := TStringList.Create;
   try
+    //usando uDAOGenerico e SimpleORM
     tamanho:= Length(aTableName);
     ArqController.Add('unit u'+aTableName+';');
     ArqController.Add('');
@@ -172,6 +173,9 @@ begin
     ArqController.Add('end;');
     ArqController.Add('');
     ArqController.Add('end.');
+
+    //Controller "comum"
+
   finally
     ArqController.SaveToFile(aPath + '/u' + aTableName + '.pas');
     ArqController.Free;

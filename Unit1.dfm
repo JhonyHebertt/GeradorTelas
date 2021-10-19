@@ -43,10 +43,9 @@ object uGeradorTelas: TuGeradorTelas
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=delphireact'
-      'User_Name=admin'
-      'Password=admin777'
-      'Server=delphireact.cm7ojuhyicsr.sa-east-1.rds.amazonaws.com'
+      'Database=dbreact'
+      'User_Name=root'
+      'Server='
       'DriverID=MySQL')
     Left = 176
     Top = 152
